@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawViewController">
+            <connections>
+                <outlet property="drawView" destination="cXk-je-F8g" id="eOV-hk-t9k"/>
+                <outlet property="slider" destination="V9N-sj-BdH" id="Ngu-93-jdI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXk-je-F8g" customClass="DrawView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="V9N-sj-BdH">
+                    <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="SKn-TO-chG"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SKn-TO-chG"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="SKn-TO-chG"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="sendValue:" destination="-1" eventType="valueChanged" id="Qha-lP-kmT"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cXk-je-F8g" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0DH-ks-kkv"/>
+                <constraint firstItem="cXk-je-F8g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Hkp-AX-36w"/>
+                <constraint firstItem="V9N-sj-BdH" firstAttribute="top" secondItem="cXk-je-F8g" secondAttribute="bottom" constant="20" id="M4e-uO-rFF"/>
+                <constraint firstItem="cXk-je-F8g" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OaX-yp-7Ly"/>
+                <constraint firstItem="V9N-sj-BdH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bqC-D0-css"/>
+                <constraint firstAttribute="trailing" secondItem="cXk-je-F8g" secondAttribute="trailing" constant="20" id="crU-HV-BsS"/>
+                <constraint firstAttribute="trailing" secondItem="V9N-sj-BdH" secondAttribute="trailing" constant="20" id="dsu-BF-WPF"/>
+                <constraint firstItem="cXk-je-F8g" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="oso-BR-9G2"/>
+                <constraint firstItem="V9N-sj-BdH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="xBH-Kj-jyq"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="cXk-je-F8g"/>
+                    <exclude reference="V9N-sj-BdH"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="0DH-ks-kkv"/>
+                    <exclude reference="Hkp-AX-36w"/>
+                    <exclude reference="OaX-yp-7Ly"/>
+                    <exclude reference="crU-HV-BsS"/>
+                    <exclude reference="oso-BR-9G2"/>
+                    <exclude reference="M4e-uO-rFF"/>
+                    <exclude reference="bqC-D0-css"/>
+                    <exclude reference="dsu-BF-WPF"/>
+                    <exclude reference="xBH-Kj-jyq"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="cXk-je-F8g"/>
+                    <include reference="V9N-sj-BdH"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="0DH-ks-kkv"/>
+                    <include reference="Hkp-AX-36w"/>
+                    <include reference="OaX-yp-7Ly"/>
+                    <include reference="crU-HV-BsS"/>
+                    <include reference="oso-BR-9G2"/>
+                    <include reference="M4e-uO-rFF"/>
+                    <include reference="bqC-D0-css"/>
+                    <include reference="dsu-BF-WPF"/>
+                    <include reference="xBH-Kj-jyq"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="459" y="367"/>
+        </view>
+    </objects>
+</document>
