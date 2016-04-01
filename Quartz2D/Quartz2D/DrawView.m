@@ -14,10 +14,13 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     SHAPE_IS_RECTANGULAR,
     SHAPE_IS_CURVED,
     SHAPE_IS_ROUND,
+    SHAPE_IS_ELLIPSE,
     SHAPE_IS_PAINTINGFAN,
     SHAPE_IS_DOWNLOADPROGRESS,
+    SHAPE_IS_HISTOGRAM,
     SHAPE_IS_PIECHART,
     SHAPE_IS_PAINTEDYELLOWPEOPLE,
+    SHAPE_IS_DOWNSNOWY,
     SHAPE_IS_COUNT
 };
 
@@ -26,6 +29,18 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     CGFloat centerX;
     CGFloat centerY;
 }
+
+- (void) WhatShapeNeedToDraw: (NSInteger) shape ;
+- (void) drawLine;
+- (void) drawTriangle;
+- (void) drawRectangular;
+- (void) drawCurved;
+- (void) drawRound;
+- (void) drawEllipse;
+- (void) drawPaintingFan;
+- (void) downloadProgress;
+- (void) drawPieChart;
+- (void) drawPaintedYellowPeople;
 
 @end
 
@@ -45,6 +60,7 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     
     centerX = rect.size.width * 0.5;
     centerY = rect.size.height * 0.5;
+    
     [self WhatShapeNeedToDraw:self.shape];
 }
 
@@ -52,36 +68,50 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     switch (shape) {
         case SHAPE_IS_LINE:{
             [self drawLine];
-        }
-            break;
+        } break;
+        
         case SHAPE_IS_TRIANGLE: {
              [self drawTriangle];
-        }
-            break;
+        } break;
+            
         case SHAPE_IS_RECTANGULAR:{
             [self drawRectangular];
-        }
-            break;
+        } break;
+           
         case SHAPE_IS_ROUND: {
             [self drawRound];
-        }
-            break;
+        } break;
+            
+        case SHAPE_IS_ELLIPSE: {
+            [self drawEllipse];
+        } break;
+            
         case SHAPE_IS_CURVED: {
             [self drawCurved];
-        }
-            break;
+        } break;
+           
         case SHAPE_IS_PAINTINGFAN:{
             [self drawPaintingFan];
-        }
-            break;
+        } break;
+          
         case SHAPE_IS_DOWNLOADPROGRESS: {
             [self downloadProgress];
-        }
-            break;
+        } break;
+           
+        case SHAPE_IS_HISTOGRAM: {
+            [self drawHistogram];
+        } break;
+           
+        case SHAPE_IS_PIECHART: {
+            [self drawPieChart];
+        } break;
+           
         case SHAPE_IS_PAINTEDYELLOWPEOPLE:{
             [self drawPaintedYellowPeople];
-        }
-            break;
+        } break;
+        case SHAPE_IS_DOWNSNOWY:{
+            [self snowAnimation];
+        } break;
         default:
             break;
     }
@@ -89,7 +119,7 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
 
 
 #pragma mark - 画直线
-- (void)drawLine{
+- (void)drawLine {
     NSLog(@"画直线");
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -166,6 +196,28 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     CGContextFillPath(context);
 }
 
+#pragma mark - 画椭圆
+- (void) drawEllipse {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(centerX - 100, centerY - 50, 100, 50)];
+    [[UIColor magentaColor] set];
+    
+    //缩放
+    //CGContextScaleCTM(context, 1.5, 1.5);
+    
+    //旋转
+    //CGContextRotateCTM(context, M_PI_4);
+    
+    //平移
+    //CGContextTranslateCTM(context, 0, -50);
+    
+    CGContextAddPath(context, path.CGPath);
+    CGContextFillPath(context);
+}
+
+
 #pragma mark - 画扇形
 - (void) drawPaintingFan {
     NSLog(@"画扇形");
@@ -201,11 +253,64 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     CGContextStrokePath(context);
 }
 
-#pragma mark - 画饼状图
-- (void)drawPieChart {
-    NSLog(@"花饼状图");
+#pragma mark - 画柱状图
+- (void) drawHistogram {
+    NSLog(@"画柱状图");
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    NSArray *array = @[@75,@25,@50,@80,@65];
+    
+    CGFloat startX = 0;
+    CGFloat startY = 0;
+    CGFloat histogramHeight = 0;
+    CGFloat histogramWidth = self.bounds.size.width / (2 * array.count - 1);
+   
+    for (int i = 0; i < array.count; i++) {
+        
+        startX = i * histogramWidth * 2;
+        histogramHeight = [array[i] floatValue] / 100.0 * self.bounds.size.height;
+        startY = self.bounds.size.height - histogramHeight;
+        
+        [[self colorRandom] set];
+        CGContextAddRect(context, CGRectMake(startX, startY, histogramWidth, histogramHeight));
+
+//        使用UIBezierPath绘制
+//        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(startX, startY, histogramWidth, histogramHeight)];
+//        [path fill];
+        
+        CGContextFillPath(context);
+    }
+    
     
 }
+
+#pragma mark - 画饼状图
+- (void)drawPieChart {
+    NSLog(@"画饼状图");
+    
+    NSArray *arr = [self arrRandom];
+    CGFloat radius = self.bounds.size.width * 0.5;
+    CGPoint center = CGPointMake(radius, radius);
+    
+    CGFloat startA = 0;//起始角度
+    CGFloat angle = 0;//角度
+    CGFloat endA = 0;//结束角度
+    
+    for (int i = 0; i < arr.count; i++) {
+        
+        startA = endA;
+        angle = [arr[i] integerValue] / 100.0 * M_PI * 2;
+        endA = startA + angle;
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
+        
+        [path addLineToPoint:center];        
+        [[self colorRandom] set];
+        
+        [path fill];
+    }
+}
+
 
 #pragma mark - 画小黄人
 - (void) drawPaintedYellowPeople {
@@ -306,9 +411,151 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     CGContextStrokePath(context);
 }
 
+- (void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self setNeedsDisplay];
+}
+
 -(void)setProgress:(float)progress {
     _progress = progress;
     [self setNeedsDisplay];
 }
+
+//随机数组
+- (NSArray *)arrRandom
+{
+    int totoal = 100;
+    
+    NSMutableArray *arrM = [NSMutableArray array];
+    
+    int temp = 0; // 30 40 30
+    for (int i = 0; i < arc4random_uniform(10) + 1; i++) {
+        temp = arc4random_uniform(totoal) + 1;
+        
+        // 100 1~100
+        // 随机出来的临时值等于总值，直接退出循环，因为已经把总数分配完毕，没必要在
+        [arrM addObject:@(temp)];
+        // 解决方式：当随机出来的数等于总数直接退出循环。
+        if (temp == totoal) {
+            break;
+        }
+        totoal -= temp;
+    }
+    // 100 30 1~100
+    // 70 40 0 ~ 69 1 ~ 70
+    // 30 25
+    // 5
+    
+    if (totoal) {
+        [arrM addObject:@(totoal)];
+    }
+    return arrM;
+}
+
+//随机颜色
+- (UIColor *)colorRandom
+{
+    // 0 ~ 255 / 255
+    // OC:0 ~ 1
+    CGFloat r = arc4random_uniform(256) / 255.0;
+    CGFloat g = arc4random_uniform(256) / 255.0;
+    CGFloat b = arc4random_uniform(256) / 255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1];
+}
+
+
+- (void) snowAnimation {
+    
+//    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(refreshScreen)];
+//    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
+   static CGFloat startY = 0;
+    UIImage *image = [UIImage imageNamed:@"雪花"];
+    [image drawAtPoint:CGPointMake(centerX, startY)];
+    startY += 10;
+    if (startY >= self.bounds.size.height) {
+        startY = 0;
+    }
+}
+
+- (void)awakeFromNib {
+    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(refreshScreen)];
+    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
+
+- (void) refreshScreen {
+    [self setNeedsDisplay];
+}
+
+- (void)draw
+{
+    CGFloat radius = self.bounds.size.width * 0.5;
+    CGPoint center = CGPointMake(radius, radius);
+    
+    
+    CGFloat startA = 0;
+    CGFloat angle = 0;
+    CGFloat endA = 0;
+    
+    
+    // 第一个扇形
+    angle = 25 / 100.0 * M_PI * 2;
+    endA = startA + angle;
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
+    
+    // 添加一根线到圆心
+    [path addLineToPoint:center];
+    
+    // 描边和填充通用
+    [[UIColor redColor] set];
+    
+    [path fill];
+    
+    // 第二个扇形
+    startA = endA;
+    angle = 25 / 100.0 * M_PI * 2;
+    endA = startA + angle;
+    UIBezierPath *path1 = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
+    
+    // 添加一根线到圆心
+    [path1 addLineToPoint:center];
+    
+    // 描边和填充通用
+    [[UIColor greenColor] set];
+    
+    [path1 fill];
+    
+    // 第二个扇形
+    startA = endA;
+    angle = 50 / 100.0 * M_PI * 2;
+    endA = startA + angle;
+    UIBezierPath *path2 = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
+    
+    // 添加一根线到圆心
+    [path2 addLineToPoint:center];
+    
+    // 描边和填充通用
+    [[UIColor blueColor] set];
+    
+    [path2 fill];
+    
+}
+
+
+
+
+- (void) function {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //平移
+    CGContextTranslateCTM(context, 100, 100);
+    
+    //缩放
+    CGContextScaleCTM(context, 1.5, 1.5);
+    
+    //旋转
+    CGContextRotateCTM(context, M_PI_4);
+}
+
 
 @end

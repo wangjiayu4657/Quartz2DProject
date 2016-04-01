@@ -60,15 +60,15 @@
                     <exclude reference="V9N-sj-BdH"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="M4e-uO-rFF"/>
+                    <exclude reference="bqC-D0-css"/>
+                    <exclude reference="dsu-BF-WPF"/>
+                    <exclude reference="xBH-Kj-jyq"/>
                     <exclude reference="0DH-ks-kkv"/>
                     <exclude reference="Hkp-AX-36w"/>
                     <exclude reference="OaX-yp-7Ly"/>
                     <exclude reference="crU-HV-BsS"/>
                     <exclude reference="oso-BR-9G2"/>
-                    <exclude reference="M4e-uO-rFF"/>
-                    <exclude reference="bqC-D0-css"/>
-                    <exclude reference="dsu-BF-WPF"/>
-                    <exclude reference="xBH-Kj-jyq"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -77,15 +77,15 @@
                     <include reference="V9N-sj-BdH"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="M4e-uO-rFF"/>
+                    <include reference="bqC-D0-css"/>
+                    <include reference="dsu-BF-WPF"/>
+                    <include reference="xBH-Kj-jyq"/>
                     <include reference="0DH-ks-kkv"/>
                     <include reference="Hkp-AX-36w"/>
                     <include reference="OaX-yp-7Ly"/>
                     <include reference="crU-HV-BsS"/>
                     <include reference="oso-BR-9G2"/>
-                    <include reference="M4e-uO-rFF"/>
-                    <include reference="bqC-D0-css"/>
-                    <include reference="dsu-BF-WPF"/>
-                    <include reference="xBH-Kj-jyq"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="459" y="367"/>

@@ -40,7 +40,7 @@
     contentInset.top = 0;
     [self.MytableView setContentInset:contentInset];
     
-    self.contentArray = @[@"画直线",@"画三角形",@"画矩形",@"画弧",@"画圆",@"画扇形",@"下载进度条",@"画饼状图",@"画小黄人"];
+    self.contentArray = @[@"画直线",@"画三角形",@"画矩形",@"画弧",@"画圆",@"画椭圆",@"画扇形",@"下载进度条",@"画柱状图",@"画饼状图",@"画小黄人",@"雪花动画"];
     
 }
 
@@ -114,9 +114,9 @@
     }
 }
 
-- (void) createView {
 
-}
+
+
 
 /*
 #pragma mark - Navigation
