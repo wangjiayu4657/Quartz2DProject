@@ -14,6 +14,8 @@
 		FA0FEC7D1CACCB4100D46C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0FEC7B1CACCB4100D46C96 /* LaunchScreen.storyboard */; };
 		FA0FEC881CACCB4100D46C96 /* Quartz2DTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0FEC871CACCB4100D46C96 /* Quartz2DTests.m */; };
 		FA0FEC931CACCB4100D46C96 /* Quartz2DUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0FEC921CACCB4100D46C96 /* Quartz2DUITests.m */; };
+		FA63EA891CD1B72D002CE02F /* expandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA881CD1B72D002CE02F /* expandViewController.m */; };
+		FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */; };
 		FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD811D1CACD315004E190F /* HomeViewController.m */; };
 		FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD81201CACF6A4004E190F /* DrawViewController.m */; };
 		FAAD81231CACF6A4004E190F /* DrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAD81211CACF6A4004E190F /* DrawViewController.xib */; };
@@ -52,6 +54,10 @@
 		FA0FEC8E1CACCB4100D46C96 /* Quartz2DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quartz2DUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0FEC921CACCB4100D46C96 /* Quartz2DUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2DUITests.m; sourceTree = "<group>"; };
 		FA0FEC941CACCB4100D46C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA63EA871CD1B72D002CE02F /* expandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandViewController.h; sourceTree = "<group>"; };
+		FA63EA881CD1B72D002CE02F /* expandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandViewController.m; sourceTree = "<group>"; };
+		FA63EA8A1CD1C0A5002CE02F /* UIImage+ImageClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageClip.h"; sourceTree = "<group>"; };
+		FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageClip.m"; sourceTree = "<group>"; };
 		FAAD811C1CACD315004E190F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		FAAD811D1CACD315004E190F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		FAAD811F1CACF6A4004E190F /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
@@ -109,15 +115,10 @@
 		FA0FEC6C1CACCB4100D46C96 /* Quartz2D */ = {
 			isa = PBXGroup;
 			children = (
+				FA63EA841CD1B6F5002CE02F /* 拓展 */,
+				FA63EA811CD1B67B002CE02F /* 首页 */,
 				FA0FEC701CACCB4100D46C96 /* AppDelegate.h */,
 				FA0FEC711CACCB4100D46C96 /* AppDelegate.m */,
-				FAAD811C1CACD315004E190F /* HomeViewController.h */,
-				FAAD811D1CACD315004E190F /* HomeViewController.m */,
-				FAAD811F1CACF6A4004E190F /* DrawViewController.h */,
-				FAAD81201CACF6A4004E190F /* DrawViewController.m */,
-				FAAD81211CACF6A4004E190F /* DrawViewController.xib */,
-				FAAD81241CACF6B7004E190F /* DrawView.h */,
-				FAAD81251CACF6B7004E190F /* DrawView.m */,
 				FA0FEC761CACCB4100D46C96 /* Main.storyboard */,
 				FA0FEC791CACCB4100D46C96 /* Assets.xcassets */,
 				FA0FEC7B1CACCB4100D46C96 /* LaunchScreen.storyboard */,
@@ -151,6 +152,63 @@
 				FA0FEC941CACCB4100D46C96 /* Info.plist */,
 			);
 			path = Quartz2DUITests;
+			sourceTree = "<group>";
+		};
+		FA63EA811CD1B67B002CE02F /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				FA63EA831CD1B68F002CE02F /* view */,
+				FA63EA821CD1B685002CE02F /* controller */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		FA63EA821CD1B685002CE02F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAAD811C1CACD315004E190F /* HomeViewController.h */,
+				FAAD811D1CACD315004E190F /* HomeViewController.m */,
+				FAAD811F1CACF6A4004E190F /* DrawViewController.h */,
+				FAAD81201CACF6A4004E190F /* DrawViewController.m */,
+				FAAD81211CACF6A4004E190F /* DrawViewController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		FA63EA831CD1B68F002CE02F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FAAD81241CACF6B7004E190F /* DrawView.h */,
+				FAAD81251CACF6B7004E190F /* DrawView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		FA63EA841CD1B6F5002CE02F /* 拓展 */ = {
+			isa = PBXGroup;
+			children = (
+				FA63EA861CD1B710002CE02F /* view */,
+				FA63EA851CD1B709002CE02F /* controller */,
+			);
+			name = "拓展";
+			sourceTree = "<group>";
+		};
+		FA63EA851CD1B709002CE02F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA63EA871CD1B72D002CE02F /* expandViewController.h */,
+				FA63EA881CD1B72D002CE02F /* expandViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		FA63EA861CD1B710002CE02F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FA63EA8A1CD1C0A5002CE02F /* UIImage+ImageClip.h */,
+				FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +342,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA63EA891CD1B72D002CE02F /* expandViewController.m in Sources */,
 				FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */,
 				FA0FEC721CACCB4100D46C96 /* AppDelegate.m in Sources */,
 				FA0FEC6F1CACCB4100D46C96 /* main.m in Sources */,
 				FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */,
 				FAAD81261CACF6B7004E190F /* DrawView.m in Sources */,
+				FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     CGFloat centerY;
 }
 
-- (void) WhatShapeNeedToDraw: (NSInteger) shape ;
+- (void) WhatShapeNeedToDraw: (NSInteger) shape;
 - (void) drawLine;
 - (void) drawTriangle;
 - (void) drawRectangular;
@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
 - (void) downloadProgress;
 - (void) drawPieChart;
 - (void) drawPaintedYellowPeople;
+- (void) snowAnimation;
 
 @end
 
@@ -50,11 +51,9 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
 
 - (instancetype) initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
     }
     return self;
 }
-
 
 - (void)drawRect:(CGRect)rect {
     
@@ -62,6 +61,14 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     centerY = rect.size.height * 0.5;
     
     [self WhatShapeNeedToDraw:self.shape];
+}
+
+- (void) didMoveToSuperview {
+    NSLog(@"jiazai");
+}
+
+- (void) willRemoveSubview {
+    NSLog(@"xiaoshi");
 }
 
 - (void) WhatShapeNeedToDraw: (NSInteger) shape {
@@ -462,36 +469,32 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     return [UIColor colorWithRed:r green:g blue:b alpha:1];
 }
 
-
+#pragma mark - 下雪动画
 - (void) snowAnimation {
     
-//    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(refreshScreen)];
-//    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(setNeedsDisplay)];
+    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     
    static CGFloat startY = 0;
     UIImage *image = [UIImage imageNamed:@"雪花"];
     [image drawAtPoint:CGPointMake(centerX, startY)];
-    startY += 10;
+    startY += 1;
     if (startY >= self.bounds.size.height) {
         startY = 0;
     }
 }
 
+//刷新屏幕,每秒钟60次
 - (void)awakeFromNib {
-    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(refreshScreen)];
-    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+//    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(setNeedsDisplay)];
+//    [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
-
-- (void) refreshScreen {
-    [self setNeedsDisplay];
-}
 
 - (void)draw
 {
     CGFloat radius = self.bounds.size.width * 0.5;
     CGPoint center = CGPointMake(radius, radius);
-    
     
     CGFloat startA = 0;
     CGFloat angle = 0;
@@ -502,27 +505,22 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     angle = 25 / 100.0 * M_PI * 2;
     endA = startA + angle;
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
-    
     // 添加一根线到圆心
     [path addLineToPoint:center];
-    
     // 描边和填充通用
     [[UIColor redColor] set];
-    
     [path fill];
+    
     
     // 第二个扇形
     startA = endA;
     angle = 25 / 100.0 * M_PI * 2;
     endA = startA + angle;
     UIBezierPath *path1 = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
-    
     // 添加一根线到圆心
     [path1 addLineToPoint:center];
-    
     // 描边和填充通用
     [[UIColor greenColor] set];
-    
     [path1 fill];
     
     // 第二个扇形
@@ -530,22 +528,19 @@ typedef NS_ENUM(NSInteger, SHAPE_IS) {
     angle = 50 / 100.0 * M_PI * 2;
     endA = startA + angle;
     UIBezierPath *path2 = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startA endAngle:endA clockwise:YES];
-    
     // 添加一根线到圆心
     [path2 addLineToPoint:center];
-    
     // 描边和填充通用
     [[UIColor blueColor] set];
-    
     [path2 fill];
-    
 }
-
-
-
 
 - (void) function {
     CGContextRef context = UIGraphicsGetCurrentContext();
+   
+    //裁剪
+    CGContextClipToRect(context, CGRectZero);
+    CGContextClip(context);
     
     //平移
     CGContextTranslateCTM(context, 100, 100);
