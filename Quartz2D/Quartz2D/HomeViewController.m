@@ -94,6 +94,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DrawViewController *drawCotroller = [[DrawViewController alloc] init];
+    drawCotroller.hidesBottomBarWhenPushed = YES;
     drawCotroller.shape = indexPath.row;
     [self.navigationController pushViewController:drawCotroller animated:YES];
 }

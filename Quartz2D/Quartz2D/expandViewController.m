@@ -7,39 +7,105 @@
 //
 
 #import "expandViewController.h"
-#import "UIImage+ImageClip.h"
+#import "WaterFlowLayout.h"
 
+static  NSString *identifier = @"itemID";
 
-
-@interface expandViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@interface expandViewController () <UICollectionViewDataSource,UICollectionViewDelegate,WaterFlowLayoutDelegate>
+@property (strong, nonatomic) UICollectionView *collectionView;
+@property (strong, nonatomic) NSMutableArray *dataSource;
 
 @end
 
 @implementation expandViewController
 
-
+- (NSMutableArray *)dataSource {
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-//    UIImage *image = [UIImage imageClipWithImage:[UIImage imageNamed:@"image5"] borderWidth:1 borderColor:[UIColor greenColor]];
-//    self.imageView.image = image;
     
-//    UIImage *image = [UIImage imageWithWaterImage:[UIImage imageNamed:@"image5"] waterLogo:@"你好啊"];
-//    self.imageView.image = image;
-    
-//    UIImage *image = [UIImage imageWithWaterImage:[UIImage imageNamed:@"image5"] waterPoint:CGPointMake(150,  60) waterLogo:@"你好啊"];
-//    self.imageView.image = image;
-    
-//    UIImage *image = [UIImage imageWithWaterImage:image logoCorlor:nil waterLogo:@"HELLO"];
-//    self.imageView.image = image1;
-    
-    UIImage *image = [UIImage imageClipWithImage:[UIImage imageNamed:@"image5"] borderWidth:1 borderColor:[UIColor greenColor]];
-    UIImage *image1 = [UIImage imageWithWaterImage:image waterPoint:CGPointMake(100, 100) waterLogo:@"HELLO"];
-    self.imageView.image = image1;
-    
+    [self CreateCollectionView];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"图形处理",@"擦除图片",@"手势密码", nil];
 }
+
+- (void) CreateCollectionView {
+    
+    WaterFlowLayout *flowLayout = [[WaterFlowLayout alloc] init];
+    flowLayout.delegate = self;
+    self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    
+    [self.view addSubview:self.collectionView];
+}
+
+#pragma mark - UICollection DataSource
+- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return  self.dataSource.count;
+}
+
+- (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor colorWithWhite:0.702 alpha:1.000];
+    NSInteger Tag = 10;
+    UILabel *label = (UILabel *)[cell.contentView viewWithTag:Tag];
+    if (label == nil) {
+        label = [[UILabel alloc] init];
+        label.tag =  Tag;
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        [cell.contentView addSubview:label];
+    }
+    label.text = self.dataSource[indexPath.item];
+    
+    [label sizeToFit];
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if (indexPath.item == 0) {
+        [self performSegueWithIdentifier:@"detailContent" sender:nil];
+    }
+    if (indexPath.item == 1) {
+        [self performSegueWithIdentifier:@"eraseTheImage" sender:nil];
+    }
+    if (indexPath.item == 2) {
+        [self performSegueWithIdentifier:@"lockController" sender:nil];
+    }
+}
+
+
+
+#pragma mark - WaterFlowLayoutDelegate
+
+- (CGFloat) waterFlowLayout:(WaterFlowLayout *)waterFlowLayout heightForItemAtIndex:(NSInteger)index itemWidth:(CGFloat)itemWidth {
+    return 100;
+}
+
+- (CGFloat) columnCountInWaterFlowLayout:(WaterFlowLayout *)waterFlowLayout {
+    return 3;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

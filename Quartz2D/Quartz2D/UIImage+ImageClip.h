@@ -19,7 +19,7 @@
  *
  *  @return  剪切后的image
  */
-+(UIImage *) imageClipWithImage:(UIImage *) image borderWidth:(CGFloat) borderWidth borderColor:(UIColor *) borderColor;
++(UIImage *) imageClipWithImage:(UIImage *) image borderWidth:(CGFloat) borderWidth borderColor:(UIColor *)borderColor;
 
 /**
  *  水印图片
@@ -29,7 +29,7 @@
  *
  *  @return  添加水印标志后的image
  */
-+(UIImage *) imageWithWaterImage:(UIImage *) image waterLogo:(NSString *) waterLogo;
++(UIImage *) imageWithWaterImage:(UIImage *) image waterMark:(NSString *)waterMark;
 
 /**
  *  水印图片
@@ -40,7 +40,7 @@
  *
  *  @return  添加水印标志后的image
  */
-+(UIImage *) imageWithWaterImage:(UIImage *) image logoCorlor:(UIColor *) logoColor waterLogo:(NSString *) waterLogo ;
++(UIImage *) imageWithWaterImage:(UIImage *) image markCorlor:(UIColor *) logoColor waterMark:(NSString *)waterMark ;
 
 
 /**
@@ -52,6 +52,37 @@
  *
  *  @return  添加水印标志后的image
  */
-+(UIImage *)imageWithWaterImage:(UIImage *)image waterPoint:(CGPoint)waterPoint waterLogo:(NSString *)waterLogo;
++(UIImage *)imageWithWaterImage:(UIImage *)image waterPoint:(CGPoint)waterPoint waterMark:(NSString *)waterMark;
+
+
++(UIImage *)imageWithCaputureView:(UIView *)view;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

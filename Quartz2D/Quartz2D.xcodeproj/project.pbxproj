@@ -14,8 +14,14 @@
 		FA0FEC7D1CACCB4100D46C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0FEC7B1CACCB4100D46C96 /* LaunchScreen.storyboard */; };
 		FA0FEC881CACCB4100D46C96 /* Quartz2DTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0FEC871CACCB4100D46C96 /* Quartz2DTests.m */; };
 		FA0FEC931CACCB4100D46C96 /* Quartz2DUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0FEC921CACCB4100D46C96 /* Quartz2DUITests.m */; };
+		FA11FD421CD30AC6009296DB /* GraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD411CD30AC6009296DB /* GraphicsViewController.m */; };
+		FA11FD461CD3485F009296DB /* EraseImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD451CD3485F009296DB /* EraseImageViewController.m */; };
+		FA11FD4A1CD36428009296DB /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD491CD36428009296DB /* LockViewController.m */; };
+		FA11FD4F1CD3645D009296DB /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD4E1CD3645D009296DB /* LockView.m */; };
+		FA11FD521CD3676D009296DB /* backView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD511CD3676D009296DB /* backView.m */; };
 		FA63EA891CD1B72D002CE02F /* expandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA881CD1B72D002CE02F /* expandViewController.m */; };
 		FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */; };
+		FA9A755D1CD2FB500064ECCD /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */; };
 		FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD811D1CACD315004E190F /* HomeViewController.m */; };
 		FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD81201CACF6A4004E190F /* DrawViewController.m */; };
 		FAAD81231CACF6A4004E190F /* DrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAAD81211CACF6A4004E190F /* DrawViewController.xib */; };
@@ -54,10 +60,22 @@
 		FA0FEC8E1CACCB4100D46C96 /* Quartz2DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Quartz2DUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0FEC921CACCB4100D46C96 /* Quartz2DUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quartz2DUITests.m; sourceTree = "<group>"; };
 		FA0FEC941CACCB4100D46C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA11FD401CD30AC6009296DB /* GraphicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsViewController.h; sourceTree = "<group>"; };
+		FA11FD411CD30AC6009296DB /* GraphicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsViewController.m; sourceTree = "<group>"; };
+		FA11FD441CD3485F009296DB /* EraseImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EraseImageViewController.h; sourceTree = "<group>"; };
+		FA11FD451CD3485F009296DB /* EraseImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EraseImageViewController.m; sourceTree = "<group>"; };
+		FA11FD481CD36428009296DB /* LockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockViewController.h; sourceTree = "<group>"; };
+		FA11FD491CD36428009296DB /* LockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
+		FA11FD4D1CD3645D009296DB /* LockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockView.h; sourceTree = "<group>"; };
+		FA11FD4E1CD3645D009296DB /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
+		FA11FD501CD3676D009296DB /* backView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backView.h; sourceTree = "<group>"; };
+		FA11FD511CD3676D009296DB /* backView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backView.m; sourceTree = "<group>"; };
 		FA63EA871CD1B72D002CE02F /* expandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandViewController.h; sourceTree = "<group>"; };
 		FA63EA881CD1B72D002CE02F /* expandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandViewController.m; sourceTree = "<group>"; };
 		FA63EA8A1CD1C0A5002CE02F /* UIImage+ImageClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageClip.h"; sourceTree = "<group>"; };
 		FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageClip.m"; sourceTree = "<group>"; };
+		FA9A755B1CD2FB500064ECCD /* WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
+		FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
 		FAAD811C1CACD315004E190F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		FAAD811D1CACD315004E190F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		FAAD811F1CACF6A4004E190F /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
@@ -154,6 +172,35 @@
 			path = Quartz2DUITests;
 			sourceTree = "<group>";
 		};
+		FA11FD471CD363F3009296DB /* 手势密码 */ = {
+			isa = PBXGroup;
+			children = (
+				FA11FD4B1CD36430009296DB /* View */,
+				FA11FD4C1CD36443009296DB /* controller */,
+			);
+			name = "手势密码";
+			sourceTree = "<group>";
+		};
+		FA11FD4B1CD36430009296DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA11FD4D1CD3645D009296DB /* LockView.h */,
+				FA11FD4E1CD3645D009296DB /* LockView.m */,
+				FA11FD501CD3676D009296DB /* backView.h */,
+				FA11FD511CD3676D009296DB /* backView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FA11FD4C1CD36443009296DB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA11FD481CD36428009296DB /* LockViewController.h */,
+				FA11FD491CD36428009296DB /* LockViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		FA63EA811CD1B67B002CE02F /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,8 +243,13 @@
 		FA63EA851CD1B709002CE02F /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA11FD471CD363F3009296DB /* 手势密码 */,
 				FA63EA871CD1B72D002CE02F /* expandViewController.h */,
 				FA63EA881CD1B72D002CE02F /* expandViewController.m */,
+				FA11FD401CD30AC6009296DB /* GraphicsViewController.h */,
+				FA11FD411CD30AC6009296DB /* GraphicsViewController.m */,
+				FA11FD441CD3485F009296DB /* EraseImageViewController.h */,
+				FA11FD451CD3485F009296DB /* EraseImageViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -205,6 +257,8 @@
 		FA63EA861CD1B710002CE02F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FA9A755B1CD2FB500064ECCD /* WaterFlowLayout.h */,
+				FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */,
 				FA63EA8A1CD1C0A5002CE02F /* UIImage+ImageClip.h */,
 				FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */,
 			);
@@ -343,10 +397,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA63EA891CD1B72D002CE02F /* expandViewController.m in Sources */,
+				FA11FD521CD3676D009296DB /* backView.m in Sources */,
+				FA11FD421CD30AC6009296DB /* GraphicsViewController.m in Sources */,
 				FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */,
+				FA11FD461CD3485F009296DB /* EraseImageViewController.m in Sources */,
 				FA0FEC721CACCB4100D46C96 /* AppDelegate.m in Sources */,
 				FA0FEC6F1CACCB4100D46C96 /* main.m in Sources */,
 				FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */,
+				FA9A755D1CD2FB500064ECCD /* WaterFlowLayout.m in Sources */,
+				FA11FD4A1CD36428009296DB /* LockViewController.m in Sources */,
+				FA11FD4F1CD3645D009296DB /* LockView.m in Sources */,
 				FAAD81261CACF6B7004E190F /* DrawView.m in Sources */,
 				FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */,
 			);

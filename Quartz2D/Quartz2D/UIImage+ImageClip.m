@@ -34,12 +34,12 @@
     return imageClip;
 }
 
-+(UIImage *)imageWithWaterImage:(UIImage *)image waterLogo:(NSString *)waterLogo {
-    UIImage *waterImage = [self imageWithWaterImage:image logoCorlor:nil waterLogo:waterLogo];
++(UIImage *)imageWithWaterImage:(UIImage *)image waterMark:(NSString *)waterLogo {
+    UIImage *waterImage = [self imageWithWaterImage:image markCorlor:nil waterMark:waterLogo];
     return waterImage;
 }
 
-+(UIImage *) imageWithWaterImage:(UIImage *)image logoCorlor:(UIColor *)logoColor waterLogo:(NSString *)waterLogo {
++(UIImage *) imageWithWaterImage:(UIImage *)image markCorlor:(UIColor *)logoColor waterMark:(NSString *)waterLogo {
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
     [image drawAtPoint:CGPointZero];
     if (logoColor == nil) {
@@ -54,7 +54,7 @@
     return waterImage;
 }
 
-+(UIImage *)imageWithWaterImage:(UIImage *)image waterPoint:(CGPoint)waterPoint waterLogo:(NSString *)waterLogo {
++(UIImage *)imageWithWaterImage:(UIImage *)image waterPoint:(CGPoint)waterPoint waterMark:(NSString *)waterLogo {
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
     [image drawAtPoint:CGPointZero];
     [waterLogo drawAtPoint:waterPoint withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:30],NSForegroundColorAttributeName:[UIColor whiteColor]}];
@@ -62,5 +62,44 @@
     UIGraphicsEndImageContext();
     return waterImage;
 }
+
+
++(UIImage *)imageWithCaputureView:(UIView *)view {
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:ctx];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
