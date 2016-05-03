@@ -9,7 +9,7 @@
         <scene sceneID="lmY-Eu-k29">
             <objects>
                 <tabBarController id="qun-Eb-v5b" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="saO-Om-jlt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,7 +30,7 @@
             <objects>
                 <navigationController id="Ny9-aK-ZcK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_chats" id="AXI-XS-zMN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5vt-QT-U74">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +41,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLa-EX-k4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-660" y="1209.75"/>
+            <point key="canvasLocation" x="-782.25" y="1281.375"/>
         </scene>
         <!--首页-->
         <scene sceneID="h5F-hx-IFM">
@@ -97,7 +97,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="0qy-TO-2bn"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="MytableView" destination="WMG-Tb-Bi5" id="tXt-JO-P20"/>
                         <outlet property="view" destination="bTD-Ft-Vkn" id="O00-b8-ryP"/>
@@ -105,14 +105,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PR2-xc-VTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-660" y="1709.25"/>
+            <point key="canvasLocation" x="-782.25" y="1900.875"/>
         </scene>
         <!--拓展-->
         <scene sceneID="jnf-lL-Mb3">
             <objects>
                 <navigationController id="DK4-jn-aDP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="拓展" image="tabbar_contacts" id="HCH-3n-eXv"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBc-vJ-Bnt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPC-9i-PoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="1209.75"/>
+            <point key="canvasLocation" x="-74.25" y="1281.375"/>
         </scene>
         <!--拓展-->
         <scene sceneID="wcl-aY-Ojj">
@@ -139,7 +139,7 @@
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="拓展页" id="ab8-32-Vxj"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="P33-WM-53O" kind="show" identifier="detailContent" id="HKP-3a-5s5"/>
                         <segue destination="tbO-bH-eKd" kind="show" identifier="eraseTheImage" id="x59-rc-Oor"/>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdq-v8-1bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="1709.25"/>
+            <point key="canvasLocation" x="-74.25" y="1900.875"/>
         </scene>
         <!--图形的处理-->
         <scene sceneID="vCg-Zg-X93">
@@ -159,15 +159,16 @@
                         <viewControllerLayoutGuide type="bottom" id="Axg-G6-lrx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zPJ-It-ayN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="图形的处理" id="xKx-RJ-813"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRY-c2-DBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-577.5" y="2270.25"/>
+            <point key="canvasLocation" x="-723.75" y="2535.375"/>
         </scene>
         <!--图片擦除-->
         <scene sceneID="YiA-4l-UjS">
@@ -178,25 +179,27 @@
                         <viewControllerLayoutGuide type="bottom" id="21w-Xd-9Pz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kma-hV-raf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="图片擦除" id="SZj-04-0RS"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgP-fZ-PR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="2270.25"/>
+            <point key="canvasLocation" x="-72.75" y="2535.375"/>
         </scene>
-        <!--View Controller-->
+        <!--手势密码-->
         <scene sceneID="wam-99-89u">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="hJi-SR-7xo" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="hJi-SR-7xo" customClass="LockViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JrT-Md-7Pj"/>
                         <viewControllerLayoutGuide type="bottom" id="2uE-EM-mo2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2ec-oj-u4m" customClass="backView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKF-u9-5iI" customClass="LockView">
@@ -204,18 +207,18 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="259" id="B8U-7n-KIx">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="284"/>
+                                    <constraint firstAttribute="height" constant="320" id="ae8-Oj-Y5H">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="603"/>
                                     </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="B8U-7n-KIx"/>
+                                        <exclude reference="ae8-Oj-Y5H"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="B8U-7n-KIx"/>
+                                        <include reference="ae8-Oj-Y5H"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -223,20 +226,24 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KKF-u9-5iI" firstAttribute="leading" secondItem="2ec-oj-u4m" secondAttribute="leading" id="5In-Fs-eSR"/>
-                            <constraint firstItem="KKF-u9-5iI" firstAttribute="top" secondItem="JrT-Md-7Pj" secondAttribute="bottom" constant="73" id="NkX-g5-32q"/>
-                            <constraint firstAttribute="trailing" secondItem="KKF-u9-5iI" secondAttribute="trailing" id="e9k-Bq-NpE"/>
+                            <constraint firstItem="KKF-u9-5iI" firstAttribute="leading" secondItem="2ec-oj-u4m" secondAttribute="leading" id="NWI-z7-IHv"/>
+                            <constraint firstItem="KKF-u9-5iI" firstAttribute="centerY" secondItem="2ec-oj-u4m" secondAttribute="centerY" id="XFy-U8-7ia">
+                                <variation key="heightClass=regular-widthClass=compact" constant="32"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="KKF-u9-5iI" secondAttribute="trailing" id="h1U-hS-Ao5"/>
+                            <constraint firstItem="KKF-u9-5iI" firstAttribute="centerX" secondItem="2ec-oj-u4m" secondAttribute="centerX" id="zeU-w0-Ikw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="KKF-u9-5iI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5In-Fs-eSR"/>
-                                <exclude reference="NkX-g5-32q"/>
-                                <exclude reference="e9k-Bq-NpE"/>
+                                <exclude reference="NWI-z7-IHv"/>
+                                <exclude reference="XFy-U8-7ia"/>
+                                <exclude reference="h1U-hS-Ao5"/>
+                                <exclude reference="zeU-w0-Ikw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -244,13 +251,19 @@
                                 <include reference="KKF-u9-5iI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5In-Fs-eSR"/>
-                                <include reference="NkX-g5-32q"/>
-                                <include reference="e9k-Bq-NpE"/>
+                                <include reference="NWI-z7-IHv"/>
+                                <include reference="XFy-U8-7ia"/>
+                                <include reference="h1U-hS-Ao5"/>
+                                <include reference="zeU-w0-Ikw"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationItem key="navigationItem" title="手势密码" id="0Y3-W5-Ce5"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lockView" destination="KKF-u9-5iI" id="02m-CL-oPS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijS-cU-d3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="ZOr-s8-rLm">
@@ -259,14 +272,14 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="423" y="2270.25"/>
+            <point key="canvasLocation" x="549.75" y="2535.375"/>
         </scene>
         <!--Item-->
         <scene sceneID="zZs-o9-zNd">
             <objects>
                 <navigationController id="SC2-qd-hMZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="tabbar_setting" id="oxl-Zf-Ls3"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R5l-9a-bTA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -277,7 +290,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73p-9f-I3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="1209.75"/>
+            <point key="canvasLocation" x="630.75" y="1287.375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BKp-Hf-8he">
@@ -293,11 +306,11 @@
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="cu3-9t-hT3"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybv-Ik-mwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="1709.25"/>
+            <point key="canvasLocation" x="630.75" y="1894.875"/>
         </scene>
     </scenes>
     <resources>

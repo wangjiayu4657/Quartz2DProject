@@ -30,7 +30,7 @@ static  NSString *identifier = @"itemID";
     [super viewDidLoad];
     
     [self CreateCollectionView];
-    self.dataSource = [NSMutableArray arrayWithObjects:@"图形处理",@"擦除图片",@"手势密码", nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"图片剪切",@"图片擦除",@"手势密码", nil];
 }
 
 - (void) CreateCollectionView {
@@ -54,7 +54,7 @@ static  NSString *identifier = @"itemID";
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithWhite:0.702 alpha:1.000];
+    cell.backgroundColor = [UIColor colorWithWhite:0.502 alpha:1.000];
     NSInteger Tag = 10;
     UILabel *label = (UILabel *)[cell.contentView viewWithTag:Tag];
     if (label == nil) {
@@ -72,7 +72,7 @@ static  NSString *identifier = @"itemID";
 
 #pragma mark - UICollectionViewDelegate
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     if (indexPath.item == 0) {
         [self performSegueWithIdentifier:@"detailContent" sender:nil];
     }
@@ -89,7 +89,7 @@ static  NSString *identifier = @"itemID";
 #pragma mark - WaterFlowLayoutDelegate
 
 - (CGFloat) waterFlowLayout:(WaterFlowLayout *)waterFlowLayout heightForItemAtIndex:(NSInteger)index itemWidth:(CGFloat)itemWidth {
-    return 100;
+    return 50;
 }
 
 - (CGFloat) columnCountInWaterFlowLayout:(WaterFlowLayout *)waterFlowLayout {

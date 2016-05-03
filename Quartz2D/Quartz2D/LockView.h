@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^completion)(id response,NSError *error);
+
 @interface LockView : UIView
+
+@property (strong , nonatomic) void (^completion)(NSString *password);
+@property (strong , nonatomic) void (^changePassword)();
 
 @end

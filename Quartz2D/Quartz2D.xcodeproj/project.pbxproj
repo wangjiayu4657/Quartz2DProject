@@ -19,8 +19,12 @@
 		FA11FD4A1CD36428009296DB /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD491CD36428009296DB /* LockViewController.m */; };
 		FA11FD4F1CD3645D009296DB /* LockView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD4E1CD3645D009296DB /* LockView.m */; };
 		FA11FD521CD3676D009296DB /* backView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA11FD511CD3676D009296DB /* backView.m */; };
+		FA43AFFC1CD8A5170060AA1E /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43AFF71CD8A5160060AA1E /* SVIndefiniteAnimatedView.m */; };
+		FA43AFFD1CD8A5170060AA1E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FA43AFF91CD8A5160060AA1E /* SVProgressHUD.bundle */; };
+		FA43AFFE1CD8A5170060AA1E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FA43AFFB1CD8A5170060AA1E /* SVProgressHUD.m */; };
 		FA63EA891CD1B72D002CE02F /* expandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA881CD1B72D002CE02F /* expandViewController.m */; };
 		FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */; };
+		FA687D711CD8484E00564054 /* DiskGesturesPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = FA687D701CD8484E00564054 /* DiskGesturesPassword.m */; };
 		FA9A755D1CD2FB500064ECCD /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */; };
 		FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD811D1CACD315004E190F /* HomeViewController.m */; };
 		FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD81201CACF6A4004E190F /* DrawViewController.m */; };
@@ -70,10 +74,18 @@
 		FA11FD4E1CD3645D009296DB /* LockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockView.m; sourceTree = "<group>"; };
 		FA11FD501CD3676D009296DB /* backView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backView.h; sourceTree = "<group>"; };
 		FA11FD511CD3676D009296DB /* backView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backView.m; sourceTree = "<group>"; };
+		FA43AFF61CD8A5160060AA1E /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		FA43AFF71CD8A5160060AA1E /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		FA43AFF81CD8A5160060AA1E /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		FA43AFF91CD8A5160060AA1E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		FA43AFFA1CD8A5170060AA1E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		FA43AFFB1CD8A5170060AA1E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		FA63EA871CD1B72D002CE02F /* expandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expandViewController.h; sourceTree = "<group>"; };
 		FA63EA881CD1B72D002CE02F /* expandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expandViewController.m; sourceTree = "<group>"; };
 		FA63EA8A1CD1C0A5002CE02F /* UIImage+ImageClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageClip.h"; sourceTree = "<group>"; };
 		FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageClip.m"; sourceTree = "<group>"; };
+		FA687D6F1CD8484E00564054 /* DiskGesturesPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskGesturesPassword.h; sourceTree = "<group>"; };
+		FA687D701CD8484E00564054 /* DiskGesturesPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskGesturesPassword.m; sourceTree = "<group>"; };
 		FA9A755B1CD2FB500064ECCD /* WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
 		FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
 		FAAD811C1CACD315004E190F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -133,6 +145,7 @@
 		FA0FEC6C1CACCB4100D46C96 /* Quartz2D */ = {
 			isa = PBXGroup;
 			children = (
+				FA43AFF51CD8A5160060AA1E /* SVProgressHUD */,
 				FA63EA841CD1B6F5002CE02F /* 拓展 */,
 				FA63EA811CD1B67B002CE02F /* 首页 */,
 				FA0FEC701CACCB4100D46C96 /* AppDelegate.h */,
@@ -188,6 +201,8 @@
 				FA11FD4E1CD3645D009296DB /* LockView.m */,
 				FA11FD501CD3676D009296DB /* backView.h */,
 				FA11FD511CD3676D009296DB /* backView.m */,
+				FA687D6F1CD8484E00564054 /* DiskGesturesPassword.h */,
+				FA687D701CD8484E00564054 /* DiskGesturesPassword.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -199,6 +214,19 @@
 				FA11FD491CD36428009296DB /* LockViewController.m */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		FA43AFF51CD8A5160060AA1E /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FA43AFF61CD8A5160060AA1E /* SVIndefiniteAnimatedView.h */,
+				FA43AFF71CD8A5160060AA1E /* SVIndefiniteAnimatedView.m */,
+				FA43AFF81CD8A5160060AA1E /* SVProgressHUD-Prefix.pch */,
+				FA43AFF91CD8A5160060AA1E /* SVProgressHUD.bundle */,
+				FA43AFFA1CD8A5170060AA1E /* SVProgressHUD.h */,
+				FA43AFFB1CD8A5170060AA1E /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		FA63EA811CD1B67B002CE02F /* 首页 */ = {
@@ -368,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA43AFFD1CD8A5170060AA1E /* SVProgressHUD.bundle in Resources */,
 				FAAD81231CACF6A4004E190F /* DrawViewController.xib in Resources */,
 				FA0FEC7D1CACCB4100D46C96 /* LaunchScreen.storyboard in Resources */,
 				FA0FEC7A1CACCB4100D46C96 /* Assets.xcassets in Resources */,
@@ -401,8 +430,11 @@
 				FA11FD421CD30AC6009296DB /* GraphicsViewController.m in Sources */,
 				FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */,
 				FA11FD461CD3485F009296DB /* EraseImageViewController.m in Sources */,
+				FA43AFFC1CD8A5170060AA1E /* SVIndefiniteAnimatedView.m in Sources */,
 				FA0FEC721CACCB4100D46C96 /* AppDelegate.m in Sources */,
 				FA0FEC6F1CACCB4100D46C96 /* main.m in Sources */,
+				FA687D711CD8484E00564054 /* DiskGesturesPassword.m in Sources */,
+				FA43AFFE1CD8A5170060AA1E /* SVProgressHUD.m in Sources */,
 				FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */,
 				FA9A755D1CD2FB500064ECCD /* WaterFlowLayout.m in Sources */,
 				FA11FD4A1CD36428009296DB /* LockViewController.m in Sources */,

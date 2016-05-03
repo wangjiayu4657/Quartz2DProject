@@ -7,8 +7,12 @@
 //
 
 #import "LockViewController.h"
+#import "LockView.h"
+#import "DiskGesturesPassword.h"
+#import "SVProgressHUD.h"
 
 @interface LockViewController ()
+@property (weak, nonatomic) IBOutlet LockView *lockView;
 
 @end
 
@@ -16,10 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
+    DiskGesturesPassword *diskGesturesPassword = [DiskGesturesPassword shareDiskGesturesPassword];
+    NSString *oldPassword = [diskGesturesPassword.userdefault objectForKey:KEY_CURRENT_PASSWORD];
     
-    
+    __weak typeof (self) weakSelf = self;
+    weakSelf.lockView.completion = ^(NSString *password){
+        if ([password isEqualToString:oldPassword]) {
+            [weakSelf.lockView removeFromSuperview];
+        }
+    };
 }
 
 
