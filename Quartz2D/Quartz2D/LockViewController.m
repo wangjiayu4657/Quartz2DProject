@@ -9,7 +9,7 @@
 #import "LockViewController.h"
 #import "LockView.h"
 #import "DiskGesturesPassword.h"
-#import "SVProgressHUD.h"
+
 
 @interface LockViewController ()
 @property (weak, nonatomic) IBOutlet LockView *lockView;

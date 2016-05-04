@@ -8,7 +8,7 @@
 
 #import "LockView.h"
 #import "DiskGesturesPassword.h"
-#import "SVProgressHUD.h"
+#import "MBProgressHUD+MJ.h"
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -203,7 +203,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
         
         if (password.length < 4) {
             [self userPhotoAnimation];
-            [SVProgressHUD showErrorWithStatus:@"密码至少不能低于4位" maskType:SVProgressHUDMaskTypeClear];
+            [MBProgressHUD showError:@"密码至少不能低于4位"];
         }else {
             //判断密码的状态
             [self validation:password completion:nil];
@@ -246,7 +246,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
             if ([self.diskGesturesPassword isExistPassword:validation]) {
                 if (!self.state) {
                     self.count = 5;
-                    [SVProgressHUD showErrorWithStatus:@"密码保存成功"];
+                    [MBProgressHUD showSuccess:@"密码保存成功"];
                     self.state = YES;
                     [userdefault removeObjectForKey:@"state"];
                     [userdefault setObject:[NSNumber numberWithBool:self.state] forKey:@"state"];
@@ -263,7 +263,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
                 }else {
                     [self setTipTitle:@"密码错误,请重试"];
                     self.count --;
-                    [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"剩余解锁次数:%ld",self.count]];
+                    [MBProgressHUD showError:[NSString stringWithFormat:@"剩余解锁次数:%ld",self.count]];
                     if (self.count == 0) {
                         //do something ...
                         self.count = 5;
@@ -282,7 +282,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
                 [self setTipTitle:@"原密码错误,请重试"];
                 [self userPhotoAnimation];
                 self.count --;
-                [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"剩余解锁次数:%ld",self.count]];
+                [MBProgressHUD showError:[NSString stringWithFormat:@"剩余解锁次数:%ld",self.count]];
                 if (self.count == 0) {
                     //do something ...
                     self.count = 5;

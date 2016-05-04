@@ -28,7 +28,6 @@
 }
 
 - (BOOL) isExistPassword:(NSString *) password {
-    
     return [[self.userdefault objectForKey:KEY_CURRENT_PASSWORD] isEqualToString:password];
 }
 

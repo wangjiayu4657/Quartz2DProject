@@ -54,7 +54,13 @@
  */
 +(UIImage *)imageWithWaterImage:(UIImage *)image waterPoint:(CGPoint)waterPoint waterMark:(NSString *)waterMark;
 
-
+/**
+ *  截屏图片
+ *
+ *  @param view 要截取的图层
+ *
+ *  @return 截屏后的图片
+ */
 +(UIImage *)imageWithCaputureView:(UIView *)view;
 
 

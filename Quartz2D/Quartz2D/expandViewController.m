@@ -8,12 +8,14 @@
 
 #import "expandViewController.h"
 #import "WaterFlowLayout.h"
+//#import "DrawingBoardViewController.h"
 
 static  NSString *identifier = @"itemID";
 
 @interface expandViewController () <UICollectionViewDataSource,UICollectionViewDelegate,WaterFlowLayoutDelegate>
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *dataSource;
+@property (strong, nonatomic) NSMutableArray *controllers;
 
 @end
 
@@ -26,11 +28,19 @@ static  NSString *identifier = @"itemID";
     return _dataSource;
 }
 
+-(NSMutableArray *)controllers {
+    if (!_controllers) {
+        _controllers = [NSMutableArray array];
+    }
+    return _controllers;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self CreateCollectionView];
-    self.dataSource = [NSMutableArray arrayWithObjects:@"图片剪切",@"图片擦除",@"手势密码", nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"图片剪切",@"图片擦除",@"手势密码",@"画板制作", nil];
+    self.controllers = [NSMutableArray arrayWithObjects:@"detailContent",@"eraseTheImage",@"lockController",@"showDrawingBoard", nil];
 }
 
 - (void) CreateCollectionView {
@@ -73,15 +83,14 @@ static  NSString *identifier = @"itemID";
 #pragma mark - UICollectionViewDelegate
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    if (indexPath.item == 0) {
-        [self performSegueWithIdentifier:@"detailContent" sender:nil];
-    }
-    if (indexPath.item == 1) {
-        [self performSegueWithIdentifier:@"eraseTheImage" sender:nil];
-    }
-    if (indexPath.item == 2) {
-        [self performSegueWithIdentifier:@"lockController" sender:nil];
-    }
+    
+    [self performSegueWithIdentifier:self.controllers[indexPath.item] sender:nil];
+
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    DrawingBoardViewController *drawController = [storyboard instantiateViewControllerWithIdentifier:@"DrawController"];
+//    drawController.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController: drawController animated:YES];
+    
 }
 
 
