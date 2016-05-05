@@ -39,8 +39,8 @@ static  NSString *identifier = @"itemID";
     [super viewDidLoad];
     
     [self CreateCollectionView];
-    self.dataSource = [NSMutableArray arrayWithObjects:@"图片剪切",@"图片擦除",@"手势密码",@"画板制作", nil];
-    self.controllers = [NSMutableArray arrayWithObjects:@"detailContent",@"eraseTheImage",@"lockController",@"showDrawingBoard", nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"图片剪切",@"图片擦除",@"手势密码",@"画板制作",@"聊天布局", nil];
+    self.controllers = [NSMutableArray arrayWithObjects:@"detailContent",@"eraseTheImage",@"lockController",@"showDrawingBoard",@"showChatController", nil];
 }
 
 - (void) CreateCollectionView {
