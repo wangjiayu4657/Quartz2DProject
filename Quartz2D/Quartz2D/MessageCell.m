@@ -68,14 +68,14 @@
     
     [showMessageButton setTitle:self.messageModel.text forState:UIControlStateNormal];
     
-    [showMessageButton layoutIfNeeded];
+    [self layoutIfNeeded];
     CGFloat LabelH = showMessageButton.titleLabel.frame.size.height;
     
     [showMessageButton updateConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(LabelH);
+        make.height.equalTo(LabelH + 30);
     }];
     
-    [showMessageButton layoutIfNeeded];
+    [self layoutIfNeeded];
     
     CGFloat MaxImageY = CGRectGetMaxY(showUserPhoto.frame);
     CGFloat MaxMessageBuutonY = CGRectGetMaxY(showMessageButton.frame);

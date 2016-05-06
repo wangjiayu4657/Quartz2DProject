@@ -11,6 +11,9 @@
 #import "MessageModel.h"
 
 @interface ChatViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong , nonatomic) NSMutableArray *messageArray;
 
@@ -22,7 +25,7 @@
 - (NSMutableArray *)messageArray {
     if (!_messageArray) {
          _messageArray = [NSMutableArray array];
-        
+
         //加载 plist 文件中的字典数组
         NSString *path = [[NSBundle mainBundle] pathForResource:@"messages" ofType:@"plist"];
         NSArray *dicArray = [NSArray arrayWithContentsOfFile:path];
@@ -41,6 +44,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置TextField的光标距离边框为10个像素
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 0)];
+    self.messageTextField.leftView = leftView;
+    self.messageTextField.leftViewMode = UITextFieldViewModeAlways;
+    
+    //监听键盘 frame 的改变
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+//    [self scrollToTableViewBottom];
+}
+
+- (void) scrollToTableViewBottom {
+    [self.tableView scrollToNearestSelectedRowAtScrollPosition: UITableViewScrollPositionBottom animated:YES];
+    [self.tableView reloadData];
+}
+
+- (void)keyBoardWillChangeFrame:(NSNotification *) notification {
+//    [self scrollToTableViewBottom];
+    
+    //获取键盘的Y值
+     CGFloat keyboardY = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
+    //获取键盘弹出过程中需要的时间
+     double duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    //修改约束
+     self.bottomView.constant = [UIScreen mainScreen].bounds.size.height - keyboardY;
+    
+     [UIView animateWithDuration:duration animations:^{
+        [self.view layoutIfNeeded];
+     }];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -59,6 +95,7 @@
     return cell;
 }
 
+
 #pragma mark - UITableViewDelegate
 - (CGFloat) tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 200;
@@ -73,6 +110,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /*
