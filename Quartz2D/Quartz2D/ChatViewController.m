@@ -10,10 +10,12 @@
 #import "MessageCell.h"
 #import "MessageModel.h"
 
+
 @interface ChatViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+//@property (weak, nonatomic) IBOutlet customTableView *tableView;
 
 @property (strong , nonatomic) NSMutableArray *messageArray;
 
@@ -55,12 +57,17 @@
 
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
 //    [self scrollToTableViewBottom];
 }
 
 - (void) scrollToTableViewBottom {
-    [self.tableView scrollToNearestSelectedRowAtScrollPosition: UITableViewScrollPositionBottom animated:YES];
+    if (self.messageArray.count == 0) {
+        return;
+    }
+     NSIndexPath *lastIndex = [NSIndexPath indexPathForRow:self.messageArray.count - 1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:lastIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     [self.tableView reloadData];
 }
 
@@ -107,10 +114,11 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.view endEditing:YES];
+
 }
+
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

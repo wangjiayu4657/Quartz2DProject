@@ -59,6 +59,8 @@
         
     }
     
+    NSIndexPath *path = [self.MytableView indexPathForSelectedRow];
+    UITableViewCell *cell = [self.MytableView cellForRowAtIndexPath:path];
 }
 
 
@@ -97,6 +99,8 @@
     drawCotroller.hidesBottomBarWhenPushed = YES;
     drawCotroller.shape = indexPath.row;
     [self.navigationController pushViewController:drawCotroller animated:YES];
+    
+    
 }
 
 

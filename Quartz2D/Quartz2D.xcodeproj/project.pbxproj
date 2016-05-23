@@ -46,6 +46,8 @@
 		FA63EA891CD1B72D002CE02F /* expandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA881CD1B72D002CE02F /* expandViewController.m */; };
 		FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */ = {isa = PBXBuildFile; fileRef = FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */; };
 		FA687D711CD8484E00564054 /* DiskGesturesPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = FA687D701CD8484E00564054 /* DiskGesturesPassword.m */; };
+		FA77CBDB1CE05F0D00FDB10F /* MultithreadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA77CBDA1CE05F0D00FDB10F /* MultithreadingViewController.m */; };
+		FA972C461CF2FC4B00E3390B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA972C451CF2FC4B00E3390B /* LoginViewController.m */; };
 		FA9A755D1CD2FB500064ECCD /* WaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */; };
 		FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD811D1CACD315004E190F /* HomeViewController.m */; };
 		FAAD81221CACF6A4004E190F /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAD81201CACF6A4004E190F /* DrawViewController.m */; };
@@ -152,6 +154,12 @@
 		FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageClip.m"; sourceTree = "<group>"; };
 		FA687D6F1CD8484E00564054 /* DiskGesturesPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskGesturesPassword.h; sourceTree = "<group>"; };
 		FA687D701CD8484E00564054 /* DiskGesturesPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskGesturesPassword.m; sourceTree = "<group>"; };
+		FA77CBD91CE05F0D00FDB10F /* MultithreadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultithreadingViewController.h; sourceTree = "<group>"; };
+		FA77CBDA1CE05F0D00FDB10F /* MultithreadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultithreadingViewController.m; sourceTree = "<group>"; };
+		FA87F8C11CEAC39D0005907F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		FA87F8C21CEAC39D0005907F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FA972C441CF2FC4B00E3390B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		FA972C451CF2FC4B00E3390B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FA9A755B1CD2FB500064ECCD /* WaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFlowLayout.h; sourceTree = "<group>"; };
 		FA9A755C1CD2FB500064ECCD /* WaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFlowLayout.m; sourceTree = "<group>"; };
 		FAAD811C1CACD315004E190F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -215,7 +223,7 @@
 				FA631B501CD9E1B80075111E /* MBProgressHUD */,
 				FA63EA841CD1B6F5002CE02F /* 拓展 */,
 				FA63EA811CD1B67B002CE02F /* 首页 */,
-				FA4B7B521CDADF32000FAF08 /* 动画 */,
+				FA4B7B521CDADF32000FAF08 /* 多线程 */,
 				FA0FEC701CACCB4100D46C96 /* AppDelegate.h */,
 				FA0FEC711CACCB4100D46C96 /* AppDelegate.m */,
 				FA0FEC761CACCB4100D46C96 /* Main.storyboard */,
@@ -285,13 +293,13 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
-		FA4B7B521CDADF32000FAF08 /* 动画 */ = {
+		FA4B7B521CDADF32000FAF08 /* 多线程 */ = {
 			isa = PBXGroup;
 			children = (
 				FA4B7B561CDADF6A000FAF08 /* view */,
 				FA4B7B571CDADF76000FAF08 /* controller */,
 			);
-			name = "动画";
+			name = "多线程";
 			sourceTree = "<group>";
 		};
 		FA4B7B561CDADF6A000FAF08 /* view */ = {
@@ -304,9 +312,10 @@
 		FA4B7B571CDADF76000FAF08 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				FA4B7B581CDAE02E000FAF08 /* 转盘 */,
 				FA4B7B531CDADF64000FAF08 /* AnimaltionViewController.h */,
 				FA4B7B541CDADF64000FAF08 /* AnimaltionViewController.m */,
+				FA77CBD91CE05F0D00FDB10F /* MultithreadingViewController.h */,
+				FA77CBDA1CE05F0D00FDB10F /* MultithreadingViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -484,6 +493,8 @@
 		FA63EA851CD1B709002CE02F /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA972C431CF2FC2300E3390B /* 登录界面 */,
+				FA4B7B581CDAE02E000FAF08 /* 转盘 */,
 				FA4B7B641CDB2B44000FAF08 /* 聊天界面 */,
 				FA631B411CD9A5AD0075111E /* 画板 */,
 				FA11FD471CD363F3009296DB /* 手势密码 */,
@@ -506,6 +517,15 @@
 				FA63EA8B1CD1C0A5002CE02F /* UIImage+ImageClip.m */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		FA972C431CF2FC2300E3390B /* 登录界面 */ = {
+			isa = PBXGroup;
+			children = (
+				FA972C441CF2FC4B00E3390B /* LoginViewController.h */,
+				FA972C451CF2FC4B00E3390B /* LoginViewController.m */,
+			);
+			name = "登录界面";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,6 +680,7 @@
 				FA0FEC721CACCB4100D46C96 /* AppDelegate.m in Sources */,
 				FA0FEC6F1CACCB4100D46C96 /* main.m in Sources */,
 				FA687D711CD8484E00564054 /* DiskGesturesPassword.m in Sources */,
+				FA77CBDB1CE05F0D00FDB10F /* MultithreadingViewController.m in Sources */,
 				FA4B7B6E1CDB3D75000FAF08 /* MessageCell.m in Sources */,
 				FAAD811E1CACD315004E190F /* HomeViewController.m in Sources */,
 				FA9A755D1CD2FB500064ECCD /* WaterFlowLayout.m in Sources */,
@@ -674,6 +695,7 @@
 				FAAD81261CACF6B7004E190F /* DrawView.m in Sources */,
 				FA4B7B8D1CDB4A5D000FAF08 /* MASCompositeConstraint.m in Sources */,
 				FA4B7B691CDB2B7F000FAF08 /* ChatViewController.m in Sources */,
+				FA972C461CF2FC4B00E3390B /* LoginViewController.m in Sources */,
 				FA4B7B911CDB4A5D000FAF08 /* MASViewAttribute.m in Sources */,
 				FA631B4F1CD9CEBB0075111E /* HandleView.m in Sources */,
 				FA63EA8C1CD1C0A5002CE02F /* UIImage+ImageClip.m in Sources */,
@@ -716,6 +738,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA0FEC771CACCB4100D46C96 /* Base */,
+				FA87F8C11CEAC39D0005907F /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -724,6 +747,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA0FEC7C1CACCB4100D46C96 /* Base */,
+				FA87F8C21CEAC39D0005907F /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

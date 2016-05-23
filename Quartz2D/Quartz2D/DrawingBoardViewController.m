@@ -60,7 +60,7 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
-    
+    //保存图片到相册
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
@@ -71,7 +71,6 @@
 - (IBAction)ColorBtn:(UIButton *)sender {
     self.drawView.pathColor = sender.backgroundColor;
 }
-
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
