@@ -25,7 +25,7 @@
     NSString *oldPassword = [diskGesturesPassword.userdefault objectForKey:KEY_CURRENT_PASSWORD];
     
     __weak typeof (self) weakSelf = self;
-    weakSelf.lockView.completion = ^(NSString *password){
+    weakSelf.lockView.validationBlock = ^(NSString *password) {
         if ([password isEqualToString:oldPassword]) {
             [weakSelf.lockView removeFromSuperview];
         }

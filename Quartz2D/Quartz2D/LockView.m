@@ -57,6 +57,19 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
 
 //xib 加载
 -(void)awakeFromNib {
+    [self setUp];
+}
+
+//代码创建
+-(instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setUp];
+    }
+    return self;
+}
+
+//初始化
+- (void) setUp {
     self.state = NO;
     //解锁总次数
     self.count = 5;
@@ -67,23 +80,6 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
     [self setUpUserPhoto];
     [self setUpGesturesView];
     [self setUpFunctionButton];
-}
-
-//代码创建
--(instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        self.state = NO;
-        //解锁总次数
-        self.count = 5;
-        //初始状态为MODE_STATE_DEFAULT
-        self.mode = MODE_STATE_DEFAULT;
-        self.diskGesturesPassword = [DiskGesturesPassword shareDiskGesturesPassword];
-        
-        [self setUpUserPhoto];
-        [self setUpGesturesView];
-        [self setUpFunctionButton];
-    }
-    return self;
 }
 
 //创建手势密码按钮
@@ -117,6 +113,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
 //添加功能按钮
 - (void) setUpFunctionButton {
     self.FunctionButtonBackView = [[UIView alloc] init];
+    
     self.changeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.changeBtn.frame = CGRectMake(45, 0, 60, 30);
     [self.changeBtn setTitle:@"修改密码" forState:UIControlStateNormal];
@@ -195,7 +192,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
             UIButton *btn = obj;
             //取消 btn 的选中状态
             btn.selected = NO;
-            [password appendFormat:@"%ld",btn.tag];
+            [password appendFormat:@"%zd",btn.tag];
         }];
         NSLog(@"密码 :%@",password);
         //清除连线
@@ -206,7 +203,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
             [MBProgressHUD showError:@"密码至少不能低于4位"];
         }else {
             //判断密码的状态
-            [self validation:password completion:nil];
+            [self validation:password];
         }
     }
 }
@@ -236,7 +233,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
 }
 
 #pragma mark - 密码的判断逻辑
-- (void) validation:(NSString *)validation completion:(completion)completionBlock {
+- (void) validation:(NSString *)validation {
     NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
     NSNumber *numValue = [userdefault objectForKey:@"state"];
     self.state = [numValue boolValue];
@@ -254,8 +251,8 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
                 }
                 [self setTipTitle:@""];
                 //判断 block 有没有值
-                if (self.completion) {
-                    self.completion(validation);
+                if (self.validationBlock) {
+                    self.validationBlock(validation);
                 }
             }else {
                 if (![self.diskGesturesPassword isContaintPassword]) {
@@ -263,7 +260,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
                 }else {
                     [self setTipTitle:@"密码错误,请重试"];
                     self.count --;
-                    [MBProgressHUD showError:[NSString stringWithFormat:@"剩余解锁次数:%ld",self.count]];
+                    [MBProgressHUD showError:[NSString stringWithFormat:@"剩余解锁次数:%zd",self.count]];
                     if (self.count == 0) {
                         //do something ...
                         self.count = 5;
@@ -282,7 +279,7 @@ typedef NS_ENUM(NSInteger,MODE_STATE) {
                 [self setTipTitle:@"原密码错误,请重试"];
                 [self userPhotoAnimation];
                 self.count --;
-                [MBProgressHUD showError:[NSString stringWithFormat:@"剩余解锁次数:%ld",self.count]];
+                [MBProgressHUD showError:[NSString stringWithFormat:@"剩余解锁次数:%zd",self.count]];
                 if (self.count == 0) {
                     //do something ...
                     self.count = 5;
