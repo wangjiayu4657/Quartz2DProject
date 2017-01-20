@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qun-Eb-v5b">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qun-Eb-v5b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="lmY-Eu-k29">
             <objects>
                 <tabBarController id="qun-Eb-v5b" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="tabbarBackground" selectionIndicatorImage="tabbarSelectBg" id="saO-Om-jlt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,14 +26,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWT-MA-TJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94.5" y="-379.5"/>
+            <point key="canvasLocation" x="-95" y="-170"/>
         </scene>
         <!--首页-->
         <scene sceneID="oqd-fy-FnA">
             <objects>
                 <navigationController id="Ny9-aK-ZcK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_chats" id="AXI-XS-zMN"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5vt-QT-U74">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +43,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLa-EX-k4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519.5" y="466.5"/>
+            <point key="canvasLocation" x="-791" y="594"/>
         </scene>
         <!--首页-->
         <scene sceneID="h5F-hx-IFM">
@@ -57,14 +59,14 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s27-Lz-nRN">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="e2s-Ec-zhi" id="fzL-fZ-sPL"/>
                                     <outlet property="delegate" destination="e2s-Ec-zhi" id="XvX-bq-1o6"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="s27-Lz-nRN" firstAttribute="leading" secondItem="bTD-Ft-Vkn" secondAttribute="leading" id="HHm-rR-wNS"/>
                             <constraint firstItem="gc0-rx-6BO" firstAttribute="top" secondItem="s27-Lz-nRN" secondAttribute="bottom" id="OZo-F6-SaY"/>
@@ -73,7 +75,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="0qy-TO-2bn"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="MytableView" destination="s27-Lz-nRN" id="9VI-6p-TuP"/>
                         <outlet property="view" destination="bTD-Ft-Vkn" id="g4t-Xi-P6Z"/>
@@ -81,14 +82,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PR2-xc-VTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519.5" y="1284.5"/>
+            <point key="canvasLocation" x="-791" y="1303"/>
         </scene>
         <!--拓展-->
         <scene sceneID="jnf-lL-Mb3">
             <objects>
                 <navigationController id="DK4-jn-aDP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="拓展" image="tabbar_contacts" id="HCH-3n-eXv"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBc-vJ-Bnt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -99,7 +99,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPC-9i-PoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93.5" y="466.5"/>
+            <point key="canvasLocation" x="-95" y="595"/>
         </scene>
         <!--拓展-->
         <scene sceneID="wcl-aY-Ojj">
@@ -112,10 +112,9 @@
                     <view key="view" contentMode="scaleToFill" id="prZ-rM-rpV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="拓展页" id="ab8-32-Vxj"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="P33-WM-53O" kind="show" identifier="detailContent" id="HKP-3a-5s5"/>
                         <segue destination="tbO-bH-eKd" kind="show" identifier="eraseTheImage" id="x59-rc-Oor"/>
@@ -128,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdq-v8-1bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93.5" y="1284.5"/>
+            <point key="canvasLocation" x="-95" y="1303"/>
         </scene>
         <!--图形的处理-->
         <scene sceneID="vCg-Zg-X93">
@@ -141,14 +140,13 @@
                     <view key="view" contentMode="scaleToFill" id="zPJ-It-ayN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="图形的处理" id="xKx-RJ-813"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRY-c2-DBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1327.5" y="2129.5"/>
+            <point key="canvasLocation" x="-2193" y="2060"/>
         </scene>
         <!--图片擦除-->
         <scene sceneID="YiA-4l-UjS">
@@ -161,14 +159,13 @@
                     <view key="view" contentMode="scaleToFill" id="kma-hV-raf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="图片擦除" id="SZj-04-0RS"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgP-fZ-PR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916.5" y="2129.5"/>
+            <point key="canvasLocation" x="-1508" y="2060"/>
         </scene>
         <!--手势密码-->
         <scene sceneID="wam-99-89u">
@@ -182,9 +179,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKF-u9-5iI" customClass="LockView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKF-u9-5iI" customClass="LockView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="ae8-Oj-Y5H">
@@ -206,7 +203,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KKF-u9-5iI" firstAttribute="leading" secondItem="2ec-oj-u4m" secondAttribute="leading" id="NWI-z7-IHv"/>
                             <constraint firstItem="KKF-u9-5iI" firstAttribute="centerY" secondItem="2ec-oj-u4m" secondAttribute="centerY" id="XFy-U8-7ia">
@@ -240,7 +237,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="手势密码" id="0Y3-W5-Ce5"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="lockView" destination="KKF-u9-5iI" id="02m-CL-oPS"/>
                     </connections>
@@ -252,7 +248,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-503.5" y="2129.5"/>
+            <point key="canvasLocation" x="-825" y="2060"/>
         </scene>
         <!--涂鸦画板-->
         <scene sceneID="Ny7-U1-rLU">
@@ -268,7 +264,7 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-4y-nDZ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fge-8r-7xA"/>
                                 </constraints>
@@ -306,7 +302,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBS-u1-76P" userLabel="红色按钮">
                                         <rect key="frame" x="15" y="40" width="105" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IQz-LD-FD8"/>
                                         </constraints>
@@ -316,14 +312,14 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-mj-hJu" userLabel="绿色按钮">
                                         <rect key="frame" x="135" y="40" width="105" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="ColorBtn:" destination="Uw3-ZJ-fCi" eventType="touchUpInside" id="hq2-52-DWr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbr-Q1-2Ce" userLabel="蓝色按钮">
                                         <rect key="frame" x="255" y="40" width="105" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="aIF-oV-2jI"/>
                                         </constraints>
@@ -338,7 +334,7 @@
                                         </connections>
                                     </slider>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Pnb-t5-ZK1" secondAttribute="trailing" constant="15" id="0K1-dw-BGb"/>
                                     <constraint firstItem="GcQ-mj-hJu" firstAttribute="leading" secondItem="kBS-u1-76P" secondAttribute="trailing" constant="15" id="0vi-L6-uxR"/>
@@ -358,10 +354,10 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUl-nq-Zw3" customClass="DrawingBoardView">
                                 <rect key="frame" x="0.0" y="108" width="375" height="479"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tUl-nq-Zw3" firstAttribute="leading" secondItem="Z2V-4v-g26" secondAttribute="leading" id="06V-6w-ax8"/>
                             <constraint firstAttribute="trailing" secondItem="tUl-nq-Zw3" secondAttribute="trailing" id="4fY-xS-xRs"/>
@@ -384,14 +380,13 @@
                     <navigationItem key="navigationItem" title="涂鸦画板" id="9lG-0b-obF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="drawView" destination="tUl-nq-Zw3" id="arE-oT-hgW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9L-MH-wqK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93.5" y="2129.5"/>
+            <point key="canvasLocation" x="-95" y="2060"/>
         </scene>
         <!--聊天布局-->
         <scene sceneID="dzm-jI-9JH">
@@ -442,7 +437,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Wzt-Xl-hN0" secondAttribute="bottom" id="5bI-cf-YlM"/>
                                     <constraint firstItem="xiU-kZ-gkU" firstAttribute="leading" secondItem="aIu-6U-qCY" secondAttribute="trailing" id="CRY-dd-36h"/>
@@ -466,7 +461,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JGe-Xg-qII">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageCell" rowHeight="117" id="z7f-KR-etD" customClass="MessageCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="117"/>
@@ -482,7 +477,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="nad-xk-NPZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -499,7 +494,7 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaI-Cp-siR">
                                                     <rect key="frame" x="225" y="32" width="60" height="56"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="230" id="8wG-JS-DDo"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Urv-UD-gGS"/>
@@ -507,7 +502,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="15" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="chat_send_nor">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="ztK-Ar-npS">
@@ -519,7 +514,7 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xec-pf-cMK">
                                                     <rect key="frame" x="96" y="32" width="60" height="56"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="230" id="Hio-hS-rxI"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="STT-rd-9pz"/>
@@ -527,7 +522,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="20" maxY="0.0"/>
                                                     <state key="normal" backgroundImage="chat_recive_nor">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -544,7 +539,7 @@
                                                 <constraint firstItem="gmm-7G-vty" firstAttribute="centerX" secondItem="Mro-FC-PG4" secondAttribute="centerX" id="nQ6-LF-xwW"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="messageButton" destination="PaI-Cp-siR" id="dDx-VC-exY"/>
                                             <outlet property="otherMessageButton" destination="xec-pf-cMK" id="30A-zt-pys"/>
@@ -560,7 +555,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YRE-Kt-II5" firstAttribute="top" secondItem="JGe-Xg-qII" secondAttribute="bottom" id="4iL-cX-OfU"/>
                             <constraint firstItem="f5U-nU-e3B" firstAttribute="top" secondItem="YRE-Kt-II5" secondAttribute="bottom" id="7R8-ep-1qa"/>
@@ -585,7 +580,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="聊天布局" id="7iP-uD-HxT"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomView" destination="yHM-5b-eRE" id="trK-EH-n5e"/>
                         <outlet property="messageTextField" destination="xiU-kZ-gkU" id="JMs-Ng-bBd"/>
@@ -594,14 +588,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ORa-lP-XQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321.5" y="2129.5"/>
+            <point key="canvasLocation" x="628" y="2060"/>
         </scene>
         <!--动画-->
         <scene sceneID="zZs-o9-zNd">
             <objects>
                 <navigationController id="SC2-qd-hMZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="动画" image="tabbar_setting" id="oxl-Zf-Ls3"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R5l-9a-bTA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -612,7 +605,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73p-9f-I3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329.5" y="466.5"/>
+            <point key="canvasLocation" x="628" y="593"/>
         </scene>
         <!--核心动画-->
         <scene sceneID="BKp-Hf-8he">
@@ -628,7 +621,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kpv-AV-b7C">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zFV-3U-SOD">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -637,12 +630,11 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ggN-S7-4sR">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
@@ -652,7 +644,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bey-uB-e1Y" firstAttribute="top" secondItem="Kpv-AV-b7C" secondAttribute="bottom" id="49H-cL-JpJ"/>
                             <constraint firstAttribute="trailing" secondItem="Kpv-AV-b7C" secondAttribute="trailing" id="97h-SW-ddb"/>
@@ -661,7 +653,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="核心动画" id="kOP-11-r7p"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="Kpv-AV-b7C" id="t56-4S-8v4"/>
                         <segue destination="XFd-Zg-0Ab" kind="show" identifier="showMultithreading" id="Dot-zD-FEP"/>
@@ -669,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybv-Ik-mwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329.5" y="1284.5"/>
+            <point key="canvasLocation" x="628" y="1303"/>
         </scene>
         <!--多线程-->
         <scene sceneID="rzE-Sf-Bv7">
@@ -685,22 +676,22 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Q3-yk-QnY">
                                 <rect key="frame" x="134" y="148" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="开启子线程">
-                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startSubThread:" destination="XFd-Zg-0Ab" eventType="touchUpInside" id="F9z-AJ-jVt"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="多线程" id="jdQ-zg-pfU"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbt-vR-bv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758.5" y="1284.5"/>
+            <point key="canvasLocation" x="1343" y="1303"/>
         </scene>
         <!--转盘动画-->
         <scene sceneID="3dN-8r-cu3">
@@ -719,12 +710,15 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyBaseBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1pU-mI-uwr">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyRotateWheel" translatesAutoresizingMaskIntoConstraints="NO" id="Uay-9r-X66">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-Ku-aj5">
                                         <rect key="frame" x="102" y="103" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="LuckyCenterButton"/>
                                         <state key="highlighted" image="LuckyCenterButtonPressed"/>
                                         <connections>
@@ -742,8 +736,9 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-MB-FgS">
                                 <rect key="frame" x="292" y="110" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="暂停">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="endRotation:" destination="VFY-Ov-d7y" eventType="touchUpInside" id="YYw-CL-P7O"/>
@@ -751,29 +746,29 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIM-Vb-iq1">
                                 <rect key="frame" x="52" y="110" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="开始">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="beginRotation:" destination="VFY-Ov-d7y" eventType="touchUpInside" id="vyY-Ac-VII"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RAU-71-NaM" firstAttribute="centerX" secondItem="SPQ-ao-qGU" secondAttribute="centerX" id="Osf-Gm-Aw7"/>
                             <constraint firstItem="RAU-71-NaM" firstAttribute="centerY" secondItem="SPQ-ao-qGU" secondAttribute="centerY" id="bkH-ht-LQD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="转盘动画" id="d9f-FN-aqa"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="wheelView" destination="RAU-71-NaM" id="0jR-F8-Dp0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8la-OE-XTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732.5" y="2129.5"/>
+            <point key="canvasLocation" x="1343" y="2060"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="zgZ-zx-K38">
@@ -786,13 +781,12 @@
                     <view key="view" contentMode="scaleToFill" id="ZSi-gN-o5c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaG-Uw-uAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1144.5" y="2129.5"/>
+            <point key="canvasLocation" x="2049" y="2060"/>
         </scene>
     </scenes>
     <resources>
@@ -812,7 +806,7 @@
         <image name="chat_send_nor" width="49" height="56"/>
         <image name="me" width="100" height="100"/>
         <image name="other" width="100" height="100"/>
-        <image name="tabbarBackground" width="1" height="44"/>
+        <image name="tabbarBackground" width="1" height="1"/>
         <image name="tabbarSelectBg" width="80" height="48"/>
         <image name="tabbar_chats" width="20" height="18"/>
         <image name="tabbar_contacts" width="20" height="18"/>

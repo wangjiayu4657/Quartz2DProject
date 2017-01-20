@@ -63,9 +63,7 @@
 }
 
 - (void) scrollToTableViewBottom {
-    if (self.messageArray.count == 0) {
-        return;
-    }
+    if (self.messageArray.count == 0) return;
      NSIndexPath *lastIndex = [NSIndexPath indexPathForRow:self.messageArray.count - 1 inSection:0];
     [self.tableView scrollToRowAtIndexPath:lastIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     [self.tableView reloadData];

@@ -42,7 +42,7 @@
     CGFloat imageW = image.size.width / 12 * scale;
     CGFloat imageH = image.size.height * scale;
     
-    CGFloat btnWH = self.bounds.size.width/2.0;
+    CGFloat btnWH = self.bounds.size.width / 2.0;
     
     for (int i = 0; i < 12; i++) {
         WheelButton *btn = [WheelButton buttonWithType:UIButtonTypeCustom];
@@ -120,18 +120,16 @@
     
 }
 
-- (void) timeChange {
+- (void)timeChange {
     CGFloat angleA = (45 / 60.0) / 180.0 * M_PI;
     self.wheelView.transform = CGAffineTransformRotate(self.wheelView.transform, angleA);
 }
 
-- (IBAction)  startPick:(UIButton *) btn {
+- (IBAction)startPick:(UIButton *) btn {
     [self animationStart];
 }
 
-
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.link.paused = NO;
     });
